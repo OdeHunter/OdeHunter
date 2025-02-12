@@ -64,23 +64,78 @@ sources:
           - name: ship_cost
             description: cost og the shippment
 
-models:
-  - name: int_sales_margin
-    tests:
-      - unique:
-          column_name: "(orders_id || '-' || products_id)"
-    columns:
-      - name: orders_id
-        description: id of the order, should be pk, that means, unique and not null
-        tests:
-          - not_null
-      - name: products_id
-        description: id of the product, should not be null
-        tests:
-          - not_null
-      - name: margin
-        description: revenue - quantity*price
-        tests:
-          - not_null
-      - name: quantity
-        description: quantity purchased
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: "Contains AdWords campaign data"
+        columns:
+          - name: date_date
+            description: "Date of campaigns"
+          - name: paid_source
+            description: "Source of campaign"
+          - name: campaign_key
+            description: "Key of campaign"
+          - name: camPGN_name
+            description: "Name of campaign"
+          - name: ads_cost
+            description: "Cost of ad per day"
+          - name: impression
+            description: "Number of impressions"
+          - name: click
+            description: "Number of clicks per day"
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: "Contains Bing campaign data"
+        columns:
+          - name: date_date
+            description: "Date of campaigns"
+          - name: paid_source
+            description: "Source of campaign"
+          - name: campaign_key
+            description: "Key of campaign"
+          - name: camPGN_name
+            description: "Name of campaign"
+          - name: ads_cost
+            description: "Cost of ad per day"
+          - name: impression
+            description: "Number of impressions"
+          - name: click
+            description: "Number of clicks per day"
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: "Contains Criteo campaign data"
+        columns:
+          - name: date_date
+            description: "Date of campaigns"
+          - name: paid_source
+            description: "Source of campaign"
+          - name: campaign_key
+            description: "Key of campaign"
+          - name: camPGN_name
+            description: "Name of campaign"
+          - name: ads_cost
+            description: "Cost of ad per day"
+          - name: impression
+            description: "Number of impressions"
+          - name: click
+            description: "Number of clicks per day"
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: "Contains Facebook campaign data"
+        columns:
+          - name: date_date
+            description: "Date of campaigns"
+          - name: paid_source
+            description: "Source of campaign"
+          - name: campaign_key
+            description: "Key of campaign"
+          - name: camPGN_name
+            description: "Name of campaign"
+          - name: ads_cost
+            description: "Cost of ad per day"
+          - name: impression
+            description: "Number of impressions"
+          - name: click
+            description: "Number of clicks per day"
